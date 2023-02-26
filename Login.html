@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <meta charset="utf-8">
+  <title>Assignement Submission</title>
+  <link rel="stylesheet" href="Css/Project.css">
+</head>
+
+<body>
+
+
+<!-- Nav Start-->
+
+<nav class="navbar">
+  <ul class="navlist">
+    <li><a href="About.html">About</a></li>
+    <li><a href="#" style="background-color:grey;">Login</a></li>
+    <li><a href="Register.html">Register</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Nav End-->
+
+  <!-- Login start-->
+<div class="container">
+
+  <header>
+  <h1>Login Here</h1>
+  </header>
+  
+  <form id="Login-Info" method="post" action="Assignment_Details.html"> 
+
+    <div class="form-group">
+    <input type="email" name="Email" id="Email" placeholder="Enter Your Username" title ="Please Enter a Valid Username" required/>
+    </div>
+
+   <div class="form-group">
+    <input type="password" name="Password" id="Password" placeholder="Enter a Password" title="Enter a Password" required/>
+   </div>
+
+
+   <div class="form-group">
+   <button type="Submit"><strong>Submit</strong></button>
+   </div>
+
+   <div class="form-group">
+    <a href="Password_Reset.html" style="font-size: 15px;"><u>Forgot Password</u></a>
+    </div>
+  
+
+  </form>
+
+</div>
+ <!-- Login end-->
+
+</body>
+
+
+<!-- Footer Start-->
+
+ 
+ 
+<footer class="Footer">
+  <div>
+  <p>
+      &copy; Online Submission Powered by Jashan  
+  </p> 
+  </div>
+
+  <script>
+
+const getChangeHandlerEmail = (key) => ({target: {value}}) => localStorage.setItem(key,value);
+document.getElementById('Email').addEventListener('change', getChangeHandlerEmail('Email'));
+
+  </script>
+  
+  
+  </footer>
+  <!-- Footer End-->
+
+
+</html>
