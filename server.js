@@ -4,14 +4,12 @@ let alert = require('alert');
 
 
 
-app.get('/', (req, res) => {
-    
-      res.sendFile(__dirname + "/Register.html");
-  });
-const listener = app.listen(process.env.PORT || 6000, () => {
+
+const listener = app.listen(process.env.PORT || 4000, () => {
     console.log('Your app is listening on port ' + listener.address().port)
   })
 
+  
 
 
 
@@ -30,7 +28,7 @@ const { Int32 } = require('mongodb');
 const saltRounds = 10;
 
 
-mongoose.connect('mongodb+srv://jashan1995:Khushman@cluster0.wb8mi.mongodb.net/User_Info', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://seerat1995:pH5cgOcKnNhdBAYM@cluster0.wb8mi.mongodb.net/User_Info', { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 
@@ -242,7 +240,7 @@ app.post('/Assignment_Details', async (req,res) => {
     else
     {
       
-      alert("Wrong username or passwor");
+      alert("Wrong username or password");
       res.sendFile(__dirname + "/Login.html");
      
     }
@@ -250,7 +248,8 @@ app.post('/Assignment_Details', async (req,res) => {
   else 
   {
    
-    res.send("Wrong username or password");
+    alert("Wrong username or password");
+    res.sendFile(__dirname + "/Login.html");
   }
 }
 

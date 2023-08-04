@@ -19,8 +19,6 @@ if(resultUserName === true && Username.length >=5){
         {
 
             alert('Account has been successfully created');
-           
-    
         }
 
         else if (Passwordd.length <= 5)
